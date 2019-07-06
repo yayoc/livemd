@@ -2,14 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Livemd</title>
-    <meta name="description" content="A live markdown editor">
-    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Livemd | Markdown preview editor using WASM</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <meta name="description" content="Markdown preview editor using WASM">
 </head>
 <body>
-    <section>
-        <textarea id="editor"></textarea>
-        <div id="preview"></div>
+    <section class="section">
+        <div class="container">
+            <h1>Livemd</h1>
+            <p>Markdown preview editor using WASM</p>
+            <div class="columns">
+                <div class="column col-6 col-xs-12">
+                    <p>Editor</p>
+                    <div class="form-group">
+                        <label for="editor" class="d-none">Input your markdown</label>
+                        <textarea class="form-input" id="editor" rows="15">
+                            # Hello, This is Livemd ---- ## usage 1. Write markdown text in
+                            this textarea. ---- ## markdown quick reference # headers
+                            *emphasis* **strong** * list >block quote code (4 spaces indent)
+                            [links](https://wikipedia.org) ---- ## changelog * 6-Jul-2019
+                            Initial commit ---- ## thanks * [Mastering Rust - Second
+                            Edition](https://learning.oreilly.com/library/view/mastering-rust-/9781789346572/)
+                        </textarea>
+                    </div>
+                </div>
+                <div class="column col-6 col-xs-12">
+                    <p>Preview</p>
+                    <div id="preview"></div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 <script src="index.js" type="text/javascript" async defer></script>
